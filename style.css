@@ -1,0 +1,609 @@
+body{
+    overflow-x:hidden;
+}
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing:border-box;
+    font-family:AvenirNextWorld, sans-serif;
+    
+}
+*::selection{
+    color: red;
+    background-color: transparent;
+}
+/* fist panel */
+.header{
+    height:400px;
+    display:flex;
+    position: absolute;
+}
+.banner-content-box{
+    height:100%;
+    width:50%;
+    display:flex;
+    padding-left:170px;
+    justify-content: center;
+    align-items: center; 
+}
+
+.banner-content{
+    height: 380px;
+    width: 85%;
+    display: flex;
+    flex-wrap: wrap;
+    position:relative;
+    gap: 30px;
+    margin-top: 200px;  
+}
+/* payoneed logo*/
+.payoneer-logo{
+    height:35px;
+    width: 150px;
+    background-image: url(/payoneer_logo.svg);
+    background-size: contain;
+    background-repeat:no-repeat;
+}
+.heading-large{
+    height: 88px;
+    width: 90%;
+    font-size: 2.25rem;  
+}
+.slogan{
+    height: 30px;
+    width: 100%;
+    font-size: 1.25rem;
+    font-weight: 500;
+    display:flex;
+    gap:4px;
+}
+.p1{
+    color: #d054ce;
+}
+.p2{
+    color: #0092f4;
+}
+.p3{
+    color: #15c474;
+}
+/* sign up button */
+.signup-button{
+    height: 56px;
+    width: 184px;
+    color: #fff;
+    background-color: #3898ec;
+    border-radius: 100px;
+    display:flex;
+    justify-content: center;
+    align-items: center;
+    background: linear-gradient( 90deg, #d054ce, #0092f4 , #15c474)     
+}
+.signup-button:hover{
+    cursor: pointer;
+    background: linear-gradient(to right, #15c474, #0092f4 , #d054ce)
+}
+/* right rotating circle box */
+.banner-image-box{
+    height:500px;
+    width:50%;
+    
+}
+/* rotating circle*/
+#rotate-circle{
+    height: 1600px;
+    width: 1600px;
+    background: linear-gradient( 90deg, #d054ce, #0092f4 , #15c474);
+    border-radius: 50%;
+    display:flex;
+    justify-content: center;
+    align-items:center;
+    animation: circle 7s linear 0s infinite normal;
+    z-index: -3;
+    top: -100px; 
+    position: relative;
+}
+@keyframes circle{
+    from{
+        rotate: 0deg;
+    }
+    to{
+        rotate:360deg;
+    }
+}
+
+.inner-rotate-circle{
+    height: 1000px;
+    width: 1000px;
+    background-color: white;
+    border-radius: 50%;
+    position:absolute;
+    
+
+}
+/* mobile in hand picture*/
+#mobile-banner-box{
+    height:600px;
+    width:50%;
+    display: flex;
+    justify-content: center;
+    margin-left: 130px;
+    position: absolute;
+    top:200px;
+    right: 200px;
+    
+    
+}
+#mobile-banner{
+    height: 400px;
+    width: 400px;
+    background-color: transparent;
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-image: url(/Mobile_banner.png);
+    
+}   
+.placeholder{
+    height:600px;
+}
+/* company trusted logo panel*/
+#slider-panel{
+    width: 100%;
+    height:135px;
+    background-color: white;
+    border-top: 1px solid grey;
+    display: flex;
+    position: relative;
+    z-index: 1;
+
+
+}
+.trusted-box{
+    height: 60px;
+    width: 40%;   
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    align-content: center;
+    background-color: white;
+    flex-wrap: wrap;
+    gap: 10px;
+    margin: 30px 30px 30px 0px;
+    padding-left: 200px;
+    border-right: 1px solid grey;   
+    position: relative;
+    z-index: 3;   
+}
+.upper-weighted-font{
+    font-weight: 600;
+    font-size: 1.1rem;
+}
+.sliding-box{
+    height: 60px;
+    width: 40%;   
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    align-content: center;
+    flex-wrap: wrap;
+    gap: 10px;
+    margin-top: 30px;
+}
+.logo-box{
+    padding-top: 50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 100px;
+    position: absolute;
+    width: 100%;
+    animation: logo-slide 15s linear 0s infinite;
+    z-index: 2;
+    overflow: hidden;
+}
+@keyframes logo-slide{
+    from{
+        transform: translateX(50%);
+    }
+    to{
+        transform: translateX(-100%);
+    }
+}
+.logo-box .logo{
+    margin-top: 32px;
+}
+/* company logo*/
+.adobe{
+    width: 100px;
+    height: 70px;
+    background-color: white;
+    background-image: url(/adobe_logo.png);
+    background-size: contain;
+    background-repeat: no-repeat; 
+    margin-bottom: 40px;
+}
+.shutterstock{
+    width: 100px;
+    height: 70px;
+    background-color: white;
+    background-image: url(/shutterstock_logo.png);
+    background-size: contain;
+    background-repeat: no-repeat;   
+    margin-bottom: 40px;
+}
+.amazon{
+    width: 100px;
+    height: 70px;
+    background-color: white;
+    background-image: url(/amazon_logo.png);
+    background-size: contain;
+    background-repeat: no-repeat; 
+    margin-bottom: 40px;
+}
+.google{
+    width: 100px;
+    height: 70px;
+    background-color: white;
+    background-image: url(/google_logo.png);
+    background-size: contain;
+    background-repeat: no-repeat;  
+    margin-bottom: 40px;  
+}
+.fiverr{
+    width: 100px;
+    height: 70px;
+    background-color: white;
+    background-image: url(/fiverr_logo.png);
+    background-size: contain;
+    background-repeat: no-repeat; 
+    margin-bottom: 40px;      
+}
+.freelancer{
+    width: 100px;
+    height: 70px;
+    background-color: white;
+    background-image: url(/freelancer_logo.png);
+    background-size: contain;
+    background-repeat: no-repeat;  
+    margin-bottom: 40px;  
+}
+/* key benefit panel*/
+.how-it-work-panel{
+    height: 415px;
+    width: 100%;
+    background-color: white;
+    border-top: 5px solid transparent;
+    border-image: linear-gradient(to right, #ff4800, #e051b0, #0092f4, #20dc68, #dfd902) 1 round;
+    padding: 80px 0px 80px 0px;                                            
+}
+.how-it-work-subpanel{
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;    
+}
+/* middle gradient line*/
+.panel-middle-line{
+    height: 130px;
+    width: 100%;
+    border-bottom: 5px solid transparent;
+    border-image: linear-gradient(to right, #ff4800, #e051b0, #0092f4, #20dc68, #dfd902) 1 round;
+    position: absolute;
+
+    
+}
+.key-benefit{
+    text-align: center ;
+    display:block;
+    margin-right: 65px;
+}
+
+.work-section{
+    width: 940px;
+    height: 210px;
+    display: flex;
+    
+
+}
+.low-fees{
+    width: 282px;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    text-align: center; 
+
+}
+.box1-logo{
+    width: 250px;
+    height: 70px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 30px;
+}
+
+.logo-container{
+    height: 65px;
+    width: 65px;
+    font-size: 25px;
+    background-color: white;
+    border: 5px solid #f8f8f8;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 2;
+}
+.box2-title{
+    width: 250px;
+    font-weight: 700;
+}
+.box3-slogan{
+    width: 250px;
+    color: #878787;
+}
+.fast-payments{
+    width: 282px;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    text-align: center; 
+}
+.dependable{
+    width: 282px;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    text-align: center; 
+}
+
+/* flexible ways to get paid seciton*/
+
+.flexibility-panel{
+    height: 500px;
+    width: 100%;
+    border-top: 1px solid #8e8b8b;
+    border-bottom: 1px solid #8e8b8b;
+    background: linear-gradient(90deg, #faf4fd, #f0f9fd, #f0f9fd);
+    padding: 90px 0px 90px 0px; 
+}
+.outer-underline-div{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.heading-underline{
+    height: 3px;
+    width: 80px;
+    background-image: linear-gradient(270deg, #0092f4, #d054ce, #ff4800);
+    margin: 25px 0 25px 0;
+}
+.little-dash{
+    height: 2px;
+    width: 40px;
+    background: linear-gradient(90deg, #0092f4, #20dc68);
+}
+
+.sub-heading{
+    font-weight: 550;
+    margin-right: 50px;    
+}
+#bill{
+    margin-right: 100px;
+}
+.flexibility-subpanel{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 30px;
+}
+.local-crn-ac{
+    width: 305px;
+    height: 268px;
+    Padding: 32px 24px;
+    background-color: white;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: flex-start;
+    border-radius: 20px;
+    box-shadow: 5px 5px 4px rgba(225, 221, 221, 0.5);
+    gap: 10px;
+}
+.mini-icon{
+    font-size: 30px;
+    width: 100%;
+    align-self:center;
+    display: block;
+}
+.text-block{
+    color: #878787;
+}
+
+/* multiple ways of earning panel */
+
+.earning-ways{
+    width: 100%;
+    height: 500px;
+    padding: 80px 16px 80px 16px;
+    border-bottom: 1px solid #8e8b8b;
+    
+}
+.earning-ways-subpanel{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+}
+.ways-outer-panel{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+
+}
+.ways{
+    width: 255px;
+    height: 150px;
+    padding-bottom: 50px;
+    border-left: 1px solid grey;
+    display: flex;
+    flex-wrap: wrap;
+    
+
+}
+.side-gradient{
+    background-color: white;
+    height: 2.5rem;
+    width: 15px;
+    border-left: 1px solid transparent;
+    border-image: linear-gradient(#270aff, #cd60ff 50%, #da1dc0) 1 round;
+    box-sizing: unset;
+}
+.ways-number{
+    font-size: 2.5rem;
+    padding: 0px 16px 0px 0px;
+    display: inline;
+}
+.ways-text-block{
+    font-weight: 200;
+    font-size: 1.25rem;
+    padding: 0px 16px 0px 16px;
+    color: #878787;
+    
+}
+.outer-button-div{
+    width: 100%;
+    height: 120px;
+    display: flex;
+    justify-content: center;    
+}
+.black-signup-button{
+    height: 56px;
+    width: 184px;
+    color: #fff;
+    background-color: black;
+    border-radius: 100px;
+    display:flex;
+    justify-content: center;
+    align-items: center;   
+    align-self: flex-end;   
+}
+.black-signup-button:hover{
+    cursor: pointer;
+}
+/* about panel */
+.about-panel{
+    height: 390px;
+    width: 100%;
+    padding: 50px 16px 50px 16px;
+    color: white;
+    background-image: url(/about_back_image.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+   
+}
+#abt{
+    text-align: center;
+}
+.content-box{
+    height: 250px;
+    width: 100%;
+    padding: 0px 250px 0px 250px;
+    text-align: center;
+    /* display: flex;
+    justify-content: center;
+    flex-wrap: wrap; */
+}
+.text-block{
+    width: 100%;
+    text-align: center;
+}
+.milestones-box{
+    height: 115px;
+    margin-top: 40px;
+    display: flex;
+    justify-content: space-evenly;
+}
+.milestone{
+    width: 154px;
+    height: 90px;
+    flex-shrink: 1;  
+}
+.milestone-head{
+    font-size: 1.5rem;
+}
+.milestone-context{
+    font-size: 0.8rem;
+    margin-top: 20px;
+
+}
+/*forbes panel*/
+.forbes-panel{
+    height: 500px;
+    background-color: white;
+    padding: 100px 0px 100px 0px; 
+    display: flex;
+    justify-content: center;
+    border-bottom: 4px solid transparent;
+    border-image: linear-gradient(to right, #ff4800, #e051b0, #0092f4, #20dc68, #dfd902) 1 round;
+}
+.forbes-content{
+    height: 310px;
+    width: 1100px    ;
+    display: flex;
+    align-items: center;
+
+}
+#forbes-textblock{
+    font-size: 2.8rem;
+    text-align: center;
+
+}
+.forbes-image{
+    height: 100%;
+    width: 1000px;
+    background-image: url(/forbes.png);
+    background-repeat: no-repeat;
+    
+}
+/* join section */
+
+.join-section-panel{
+    height: 300px;
+    width: 100%;
+    text-align: center;
+    padding: 80px 16px 80px 16px;
+    align-items: center;
+    background-image: url(/white_circular_Back.jpg);
+    background-size: cover;
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+    justify-content: center;
+   
+}
+/* footer */
+.footer-panel{
+    height: 60px;
+    width: 100%;
+    color: #fff;
+    background-color: #252526;
+    padding: 20px 50px 20px 50px;
+    display: flex;
+    align-items: center;    
+    justify-content: space-between;
+}
+.policies-cookies-textblock{
+    display: flex;
+    gap: 30px;
+}
+
+
+
+
